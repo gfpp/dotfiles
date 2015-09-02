@@ -1,0 +1,41 @@
+# system-wide mercurial configuration file
+# See hgrc(5) for more information
+
+# User Interface settings
+[ui]
+username=gfpp <gperez@scdt.frc.utn.edu.ar>
+verbose=True
+editor=vim
+merge=meld
+
+# Enabled extensions
+[extensions]
+hgext.convert=
+hgext.extdiff=
+hgext.churn=
+#or, if churn.py is not in the hgext dir:
+#churn=/path/to/churn.py
+hgk=
+activity=/home/gfpp/software/Hgactivity/activity
+progress= 
+hgext.churn=
+#or, if churn.py is not in the hgext dir:
+#churn=/path/to/churn.py
+
+[extdiff]
+cmd.vimdiff=
+
+[alias]
+vi=vimdiff
+vim=vimdiff
+
+[auth]
+gfpp_docs.prefix=http://proyectos.ciii.frc.utn.edu.ar/hg/gfpp_docs
+gfpp_docs.schemes=http https
+
+#[merge-tools]
+#vimdiff.executable=vim
+#vimdiff.args=-d $base $local $output $other +close +close
+
+[hostfingerprints]
+proyectos.ciii.frc.utn.edu.ar=7d:e3:5b:f7:a0:68:04:a7:4a:c2:78:f5:ed:00:2b:9f:97:3f:0a:91
