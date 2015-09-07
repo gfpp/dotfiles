@@ -1,0 +1,10 @@
+addpath(genpath('~/repos/octavelibs'), '-begin');
+
+ addpath(genpath('~/libs/MatlabFns'), '-end');
+# addpath('/home/gfpp/libs/openslam/tjtf/trunk/matlab/', '-end');
+
+#edit mode async
+#edit editor "xterm -e 'vim %s'"
+
+graphics_toolkit('gnuplot');
+# graphics_toolkit('fltk');
