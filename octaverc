@@ -2,9 +2,15 @@ addpath(genpath('~/repos/octavelibs'), '-begin');
 
  addpath(genpath('~/libs/MatlabFns'), '-end');
 # addpath('/home/gfpp/libs/openslam/tjtf/trunk/matlab/', '-end');
+#
+ addpath(genpath('/usr/share/octave/packages/odepkg-0.8.5/'), '-end');
+
 
 #edit mode async
 #edit editor "xterm -e 'vim %s'"
 
-graphics_toolkit('gnuplot');
-# graphics_toolkit('fltk');
+#graphics_toolkit('gnuplot');
+graphics_toolkit('fltk');
+
+set(0, 'DefaultFigurePosition', [300 200 1000 800]);
+

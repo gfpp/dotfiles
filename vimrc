@@ -58,12 +58,13 @@ map <C-F9> :w!<CR>:!aspell --encoding=iso-8859-1 -d es -c %<CR>:e! %<CR>
 "au WinEnter * set cursorline cursorcolumn
 "set cursorline 
 set cursorcolumn
-"set cursorline
 
 "hi CursorLine cterm=none ctermbg=0
 "hi CursorColumn term=none cterm=none ctermbg=7
 
 set iskeyword+=_
+
+"set colorcolumn=80
 
 "imap qq <Esc>
 
@@ -107,8 +108,17 @@ set wcm=<C-Z>
 map <F4> :emenu <C-Z>
 
 " Opciones gvim (GUI)
-colorscheme desert
+"colorscheme desert
 "colorscheme delek
+"colorscheme elflord
+"colorscheme evening
+"colorscheme koehler
+"colorscheme murphy
+"colorscheme pablo
+"colorscheme ron
+"colorscheme slate
+colorscheme torte
+"colorscheme zellner
 
 let g:alternateSearchPath='sfr:../h,sfr:../src'
 map <F2> <ESC> :A <CR>

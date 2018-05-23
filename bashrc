@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#set -x
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -30,7 +32,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -80,7 +82,8 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+#alias l='ls -CF'
+alias l='ls -lhF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -100,15 +103,42 @@ fi
 
 
 # ------------------------------------------------------------------------------
+alias octave='octave --no-gui'
+
 export EDITOR=vi
 export PATH+=:/home/gfpp/scripts/
 
+# for Eigen3
+export EIGEN3_INCLUDE_DIR=/usr/include/eigen3/
+
+# Location of flexiport.pc
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib64/pkgconfig/
+
 # for Player/Stage
-export PATH=/usr/local/bin:$PATH 
-export CPATH=/usr/local/include:$CPATH
-export LIBRARY_PATH=/usr/local/lib:/usr/local/lib64:$LIBRARY_PATH
-export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig:$PKG_CONFIG_PATH
-export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64:/usr/lib:$LD_LIBRARY_PATH
-#export PYTHONPATH=/usr/local/lib/python2.6/site-packages
-export PYTHONPATH+=:/usr/local/lib/python2.7/site-packages
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/lib64/
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib:/usr/local/lib64/
+
+#export PATH=/usr/local/bin:$PATH 
+#export CPATH=/usr/local/include:$CPATH
+
+# ROS
+source /opt/ros/kinetic/setup.bash
+source $HOME/catkin_ws/devel/setup.bash
+
+# MAVLink
+#export PYTHONPATH=$PYTHONPATH:$HOME/git/mavlink/
+
+# SITL (ArduPilot)
+#export PATH=$PATH:$HOME/jsbsim/src
+#export PATH=$PATH:$HOME/git/ardupilot/Tools/autotest
+#export PATH=$PATH:$HOME/libs/ardupilot-master/Tools/autotest
+export PATH=/usr/lib/ccache:$PATH
+
+#export PYTHONPATH=$PYTHONPATH:$HOME/libs/ardupilot-master/Tools/autotest
+
+#set +x
+
+# added by Anaconda3 4.2.0 installer
+#export PATH="/home/gfpp/anaconda3/bin:$PATH"
+
 
