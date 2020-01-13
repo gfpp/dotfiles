@@ -134,8 +134,6 @@ source $HOME/catkin_ws/devel/setup.bash
 #export PATH=$PATH:$HOME/libs/ardupilot-master/Tools/autotest
 export PATH=/usr/lib/ccache:$PATH
 
-#export PYTHONPATH=$PYTHONPATH:$HOME/libs/ardupilot-master/Tools/autotest
-
 #set +x
 
 # added by Anaconda3 4.2.0 installer

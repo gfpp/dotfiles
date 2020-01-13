@@ -128,9 +128,9 @@ let g:C_LineEndCommColDefault = 60
 
 " ------------------------------------------------------------------------------
 let g:NERDTreeWinSize = 45
-autocmd VimEnter *.c,*.cc,*.cpp,*.cxx,*.h,*.hpp,*.m,*.world,*.cfg NERDTree
-autocmd BufEnter *.c,*.cc,*.cpp,*.cxx,*.h,*.hpp,*.m,*.world,*.cfg NERDTreeMirror
-autocmd VimEnter *.c,*.cc,*.cpp,*.cxx,*.h,*.hpp,*.m,*.world,*.cfg wincmd p
+autocmd VimEnter *.c,*.cc,*.cpp,*.cxx,*.h,*.hpp,*.m,*.world,*.cfg,*.py NERDTree
+autocmd BufEnter *.c,*.cc,*.cpp,*.cxx,*.h,*.hpp,*.m,*.world,*.cfg,*.py NERDTreeMirror
+autocmd VimEnter *.c,*.cc,*.cpp,*.cxx,*.h,*.hpp,*.m,*.world,*.cfg,*.py wincmd p
 
 " NERD Tree
 nmap <silent> <special> <F9> :NERDTreeToggle<RETURN>
